@@ -1,0 +1,106 @@
+* {
+    font-family: 'Space Mono', monospace;
+}
+
+body{
+    margin:auto
+}
+
+header {
+    position: absolute;
+}
+
+
+.sous-menu:nth-child(1) {
+    right: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95vw;
+    }
+
+.sous-menu{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+
+.menu{
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/*LOGIN FORM */
+
+h1 {
+    text-align: center;
+    font-size: 70px;
+    font-weight: 400;
+}
+
+.container-login {
+    display: flex;
+    overflow: none;
+} 
+
+.illu-login {
+    width: 70%;
+    height: auto;
+    margin: 0 auto 0 auto;
+}
+
+.container-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.container-right {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background-color: #3FB1B5;
+    height: 100vh;
+}
+
+.container-right div {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 0 auto;
+}
+.container-right input,.btn-submit {
+    border-radius: 20px;
+    background-color: #fff;
+    margin: 2rem 0 2rem 0;
+    width: 50%;
+    padding: 0.5rem;
+    border: none;
+
+}
+
+label {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.btn-submit {
+    width: 15%;
+    cursor: pointer;
+}
+
+.container-right input {
+    width: 100%;
+    margin: 0 auto 0 auto;
+}
+
+
+

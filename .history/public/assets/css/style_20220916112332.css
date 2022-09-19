@@ -1,0 +1,29 @@
+body{
+    margin:auto
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+.sous-menu{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+
+.menu{
+    display: flex;
+    list-style-type: none;
+    width: 25%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container-left {
+    display: flex;
+    flex-direction: column;
+    d
+}

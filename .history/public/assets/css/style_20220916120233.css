@@ -1,0 +1,85 @@
+* ''
+
+body{
+    margin:auto
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+.sous-menu{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+
+.menu{
+    display: flex;
+    list-style-type: none;
+    width: 25%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*LOGIN FORM */
+
+h1 {
+    text-align: center;
+    font-size: 70px;
+}
+
+.container-login {
+    display: flex;
+} 
+
+.container-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.container-right {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background-color: #3FB1B5;
+    height: 100vh;
+}
+
+.container-right div {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 0 auto;
+}
+.container-right input,.btn-submit {
+    border-radius: 20px;
+    background-color: #fff;
+    margin: 2rem 0 2rem 0;
+    width: 50%;
+    padding: 0.5rem;
+    border: none;
+
+}
+
+label {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.btn-submit {
+    width: 15%;
+}
+
+.container-right input {
+    width: 100%;
+    margin: 0 auto 0 auto;
+}
+
+
+

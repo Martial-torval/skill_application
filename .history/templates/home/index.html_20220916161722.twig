@@ -1,0 +1,87 @@
+{% extends "layout/default.html.twig" %}
+
+{% block body %}
+<section class="section-1">
+        <h1 class="confirme">Confirme tes compétences en <span class="typewrite" data-period="2000" data-type='[ "web design","developpement web","système et réseaux","devOps" ]'></span></h1>
+        <div class="illustration">
+            <img src="/assets/img/illu.svg" alt="" width="700px">
+        </div>
+    </section>
+
+    <div class="ensavoirplus">
+        <p><img src="/assets/img/arrow.png" alt="" width="15px"> En savoir plus</p>
+    </div>
+
+    <section class="section-2">
+
+        <h1 class="prochaine">Les prochaines sessions</h1>
+
+        <div class="examens">
+
+            <div class="design">
+                <div class="date">
+                    <p>Lyon 6</p>
+                    <p>22/09/2022</p>
+                </div>
+                <div class="image">
+                    <img src="/assets/img/Group 21.svg" alt="">
+                </div>
+                <hr>
+                <div class="domaine">
+                    <p>Web Design</p>
+                    <p>UX / UI</p>
+                </div>
+            </div>
+
+            <div class="dev">
+                <div class="date">
+                    <p>Lyon 8</p>
+                    <p>25/09/2022</p>
+                </div>
+                <div class="image">
+                    <img src="/assets/img/Group 21.svg" alt="">
+                </div>
+                <hr>
+                <div class="domaine">
+                    <p>Développement Web</p>
+                    <p>Angular</p>
+                </div>
+            </div>
+
+            <div class="reseau">
+                <div class="date">
+                    <p>Lyon 6</p>
+                    <p>22/09/2022</p>
+                </div>
+                <div class="image">
+                    <img src="/assets/img/Group_21.svg" alt="">
+                </div>
+                <hr>
+                <div class="domaine">
+                    <p>Système et réseaux</p>
+                    <p>Switch</p>
+                </div>
+            </div>
+
+            <div class="devops">
+                <div class="date">
+                    <p>Lyon 6</p>
+                    <p>22/09/2022</p>
+                </div>
+                <div class="image">
+                    <img src="/assets/img/Group_21.svg" alt="">
+                </div>
+                <hr>
+                <div class="domaine">
+                    <p>DevOps</p>
+                    <p>Bonne question</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="voir">
+        <p>Voir tous les examens ></p>
+    </div>
+
+{% endblock %}

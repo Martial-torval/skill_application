@@ -134,7 +134,7 @@ h2 {
 a {
     text-decoration: none;
     color: #000;
-    /* text-decoration: underline; */
+    text-decoration: underline;
     text-underline-offset: 0.5em;
 }
 .container-right-login input,.btn-submit {
@@ -199,9 +199,9 @@ li{
     display: flex;
     background-image: url(../img/illu.svg);
     background-repeat: no-repeat;
-    background-size: 20rem, contain;
-    background-position: right bottom;
-    /* background-size: 100% contain; */
+    background-size: contain;
+    background-position: right;
+    background-size: 0%;
 }
 
 /* .illustration{

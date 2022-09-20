@@ -1,5 +1,6 @@
 * {
     font-family: 'Space Mono', monospace;
+    z
 }
 
 body{
@@ -134,7 +135,7 @@ h2 {
 a {
     text-decoration: none;
     color: #000;
-    /* text-decoration: underline; */
+    text-decoration: underline;
     text-underline-offset: 0.5em;
 }
 .container-right-login input,.btn-submit {
@@ -197,20 +198,18 @@ li{
 
 .section-1{
     display: flex;
-    background-image: url(../img/illu.svg);
+    /* background-image: url(../img/illu.svg);
     background-repeat: no-repeat;
     background-size: 20rem, contain;
-    background-position: right bottom;
+    background-position: right bottom; */
     /* background-size: 100% contain; */
 }
 
-/* .illustration{
-    background: url(./illu.svg);
-    width: 500px;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-} */
+.illustration{
+position: absolute;
+right: 0;
+z-index: 1;
+}
 .confirme{
     font-size: 60px;
     width: 70%;

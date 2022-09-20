@@ -2,9 +2,9 @@
 
 {% block body %}
 <section class="section-1">
-        <h1 class="confirme">Confirme tes compétences en <br> <span class="typewrite" data-period="2000" data-type='[ "web design","developpement web","système et réseaux","devOps" ]'></span></h1>
+        <h1 class="confirme">Confirme tes compétences en < <span class="typewrite" data-period="2000" data-type='[ "web design","developpement web","système et réseaux","devOps" ]'></span></h1>
         <div class="illustration">
-            <img src="/assets/img/illu.svg" alt="" width="700px">
+            {# <img src="/assets/img/illu.svg" alt="" width="700px"> #}
         </div>
     </section>
 
@@ -81,7 +81,7 @@
     </section>
 
     <div class="voir">
-        <a href="{{path('session')}}"<p>Voir tous les examens ></p>
+        <p>Voir tous les examens ></p>
     </div>
 
 {% endblock %}

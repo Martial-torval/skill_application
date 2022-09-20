@@ -55,13 +55,9 @@ h2 {
 } 
 
 .illu-login {
-    width: 68%;
+    width: 70%;
     height: auto;
     margin: 0 auto 0 auto;
-}
-
-#registration_form_birthday {
-    margin: auto;
 }
 
 .container-left {
@@ -89,10 +85,6 @@ h2 {
     flex-direction:column;
     justify-content: center;
     align-items: center;
-}
-
-.register-form div {
-    margin-top: 1em;
 }
 
 .register-form input{
@@ -127,9 +119,6 @@ h2 {
     margin: 0 auto;
 }
 
-#registration_form_firstName {
-    width: 95%;
-}
 
 a {
     text-decoration: none;

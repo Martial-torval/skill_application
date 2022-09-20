@@ -55,13 +55,9 @@ h2 {
 } 
 
 .illu-login {
-    width: 68%;
+    width: 70%;
     height: auto;
     margin: 0 auto 0 auto;
-}
-
-#registration_form_birthday {
-    margin: auto;
 }
 
 .container-left {
@@ -89,10 +85,6 @@ h2 {
     flex-direction:column;
     justify-content: center;
     align-items: center;
-}
-
-.register-form div {
-    margin-top: 1em;
 }
 
 .register-form input{
@@ -127,17 +119,13 @@ h2 {
     margin: 0 auto;
 }
 
-#registration_form_firstName {
-    width: 95%;
-}
-
 a {
     text-decoration: none;
     color: #000;
     text-decoration: underline;
     text-underline-offset: 0.5em;
 }
-.container-right-login input,.btn-submit {
+.container-right-login input,.btn-submit, {
     border-radius: 20px;
     background-color: #fff;
     margin: 1rem 0 1rem 0;
@@ -188,6 +176,10 @@ footer{
 
 .description{
     width: 25%;
+}
+
+.between div {
+    margin-right: 4em;
 }
 
 li{
@@ -296,7 +288,7 @@ li{
     padding: 30px;
 }
 
-.name, .lastname, .phone{
+.name, .email, .lastname, .phone{
     display: flex;
     justify-content: space-between;
 }

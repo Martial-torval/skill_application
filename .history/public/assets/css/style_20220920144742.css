@@ -55,13 +55,9 @@ h2 {
 } 
 
 .illu-login {
-    width: 68%;
+    width: 70%;
     height: auto;
     margin: 0 auto 0 auto;
-}
-
-#registration_form_birthday {
-    margin: auto;
 }
 
 .container-left {
@@ -91,10 +87,6 @@ h2 {
     align-items: center;
 }
 
-.register-form div {
-    margin-top: 1em;
-}
-
 .register-form input{
     border-radius: 20px;
     border: none;
@@ -117,7 +109,7 @@ h2 {
     background-color: white;
     border: none;
     border-radius: 10px;
-    padding: 10px;
+    padding: 5px;
 }
 
 .container-right-login .lastName_login,.firstName_login {
@@ -125,10 +117,6 @@ h2 {
     flex-direction: column;
     width: 75%;
     margin: 0 auto;
-}
-
-#registration_form_firstName {
-    width: 95%;
 }
 
 a {
@@ -164,11 +152,7 @@ label {
 /*END LOGIN*/
 
 /* INSCRIPTION*/
-.h1_registration {
-    text-align: center;
-    font-size: 70px;
-    font-weight: 400;
-}
+
 .container-right-register div {
 display: flex;
 }
@@ -296,7 +280,7 @@ li{
     padding: 30px;
 }
 
-.name, .lastname, .phone{
+.name, .email, .lastname, .phone{
     display: flex;
     justify-content: space-between;
 }

@@ -55,13 +55,9 @@ h2 {
 } 
 
 .illu-login {
-    width: 68%;
+    width: 0%;
     height: auto;
     margin: 0 auto 0 auto;
-}
-
-#registration_form_birthday {
-    margin: auto;
 }
 
 .container-left {

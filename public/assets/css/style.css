@@ -128,7 +128,6 @@ a {
     border-radius: 20px;
     background-color: #fff;
     margin: 1rem 0 1rem 0;
-    width: 75%;
     padding: 0.5rem;
     border: none;
 
@@ -140,13 +139,10 @@ label {
 }
 
 .btn-submit {
-    width: 15%;
+    width: 20%;
     cursor: pointer;
 }
-.container-right-login div {
-    display: flex;
-    flex-direction: column;
-    }
+
 .container-right-login,.container-right-register div, input {
     width: 100%;
     margin: 0 auto 0 auto;

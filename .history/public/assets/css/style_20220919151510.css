@@ -1,0 +1,251 @@
+* {
+    font-family: 'Space Mono', monospace;
+}
+
+body{
+    margin:auto
+}
+
+
+header {
+    position: absolute;
+}
+
+.logo {
+    margin-left: 1.5rem;
+}
+
+
+.menu li:nth-child(2) {
+    margin-left: 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98vw;
+    }
+
+.sous-menu{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+
+.menu{
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/*LOGIN FORM */
+
+h2 {
+    text-align: center;
+    font-size: 70px;
+    font-weight: 400;
+}
+
+.container-login {
+    display: flex;
+    overflow: none;
+} 
+
+.illu-login {
+    width: 70%;
+    height: auto;
+    margin: 0 auto 0 auto;
+}
+
+.container-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.container-right-login,.container-right-register {
+    background-color: #3FB1B5;
+    flex: 1;
+    height: 100vh;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+regi
+
+.container-right-login .lastName_login,.firstName_login {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    text-decoration: underline;
+    text-underline-offset: 0.5em;
+}
+.container-right-login input,.btn-submit {
+    border-radius: 20px;
+    background-color: #fff;
+    margin: 1rem 0 1rem 0;
+    width: 75%;
+    padding: 0.5rem;
+    border: none;
+
+}
+
+label {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.btn-submit {
+    width: 15%;
+    cursor: pointer;
+}
+.container-right-login div {
+    display: flex;
+    flex-direction: column;
+    }
+.container-right-login,.container-right-register div, input {
+    width: 100%;
+    margin: 0 auto 0 auto;
+}
+
+/*END LOGIN*/
+
+/* INSCRIPTION*/
+
+.container-right-register div {
+display: flex;
+}
+
+.container-row {
+    display: flex!important;
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color:#3FB1B5 ;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+    padding: 30px;
+}
+
+.description{
+    width: 25%;
+}
+
+li{
+    list-style-type: none;
+}
+
+
+.section-1{
+    display: flex;
+}
+
+/* .illustration{
+    background: url(./illu.svg);
+    width: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+} */
+.confirme{
+    font-size: 60px;
+    width: 70%;
+    padding:20px;
+    font-weight: 400;
+}
+
+.ensavoirplus{
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 0.5px;
+    padding: 20px;
+    
+}
+
+.prochaine{
+    text-align: center;
+    font-size: 40px ;
+}
+
+.design {
+    background-color: #3FB1B5;
+    border-radius: 20px;
+    width: 17%;
+    padding: 0.5rem;
+}
+.dev{
+    background-color: #FFCF2D;
+    border-radius: 20px;
+    width: 17%;
+    padding: 0.5rem;
+}
+
+.reseau{
+    background-color: #FE5244;
+    border-radius: 20px;
+    width: 17%;
+    padding: 0.5rem;
+}
+
+.devops{
+
+    background-color: #9A3B82;
+    border-radius: 20px;
+    width: 17%;
+    padding: 0.5rem;
+
+}
+
+.date{
+    display: flex;
+    justify-content: space-between;
+}
+
+.image{
+    text-align: center;
+}
+
+.examens{
+    display: flex ;
+    justify-content: space-around;
+}
+
+.voir{
+    text-align: center;
+    font-size: 20px;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 0.5px;
+    margin: 5rem;
+}
+
+.profil{
+    text-align: center;
+}
+
+.infoperso{
+    text-align: left;
+    width: 37%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.section-2, .section-3{
+    padding: 30px;
+}

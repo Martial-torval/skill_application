@@ -1,0 +1,23 @@
+{% extends "layout/default.html.twig" %}
+
+{% block body %}
+
+	<div class="profil">
+		<h1>Mon profil</h1>
+
+		<div class="infoperso">
+			<h4>Nom {{user.firstName}}</h4>
+            <hr>
+			<h4>Prenom {{user.lastName}}</h4>
+            <hr>
+			<h4>Adresse mail {{user.email}}</h4>
+            <hr>
+			<h4>Numero de télephone {{user.phoneNumber}}</h4>
+            <hr>
+			<h4>Mot de passe {{user.password}}</h4>
+            <hr>
+			{# <h4>{{user.birthday}}</h4> #}
+			<
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'layout/default2.html.twig' %}
+
+
+{% block body %}
+<!DOCTYPE html>
+<title>Register</title>
+<section class="container-login">
+
+  <article class="container-left">
+    <h1 class="h3 mb-3 font-weight-normal">Bon retour parmi nous !</h1>
+    <img alt="illustration-login" src="/assets/img/illu-login.svg" class="illu-login"/>
+  </article>
+
+  <div class="register-form">
+
+
+    {{ form_start(registrationForm) }}
+    <div class="-row">
+        {{ form_row(registrationForm.firstName) }}
+        {{ form_row(registrationForm.lastName) }}
+    </div>
+        {{ form_row(registrationForm.email) }}
+        <div class="between">
+        {{ form_row(registrationForm.phoneNumber) }}
+        {{ form_row(registrationForm.birthday) }}
+        </div>
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Password'
+        }) }}
+        {# {{ form_row(registrationForm.agreeTerms) }} #}
+
+        <button type="submit" class="btn">C'est parti !</button>
+    {{ form_end(registrationForm) }}
+    </div>
+{% endblock %}

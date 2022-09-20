@@ -1,0 +1,35 @@
+{% extends "layout/default.html.twig" %}
+
+{% block body %}
+
+	<div class="profil">
+		<h1>Mon profil</h1>
+
+		<div class="infoperso">
+
+		<div class="name">
+			<h4>Nom {{user.firstName}}</h4>
+            <hr>
+		</div>
+
+		<div class="lastname">
+			<h4>Prenom {{user.lastName}}</h4>
+            <hr>
+		<div>
+			
+		<div class="email">
+			<h4>Adresse mail {{user.email}}</h4>
+            <hr>
+		<div>
+
+		<div class="phone">
+			<h4>Numero de télephone</h4>
+			<h{{user.phoneNumber}}</h4>
+            <hr>
+		<div>
+		
+			{# <h4>{{user.birthday}}</h4> #}
+			<a>Supprimer</a>
+		</div>
+	</div>
+{% endblock %}

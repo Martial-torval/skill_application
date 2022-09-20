@@ -23,10 +23,22 @@
             <ul class="menu">
             
                 <li><a class="sous-menu" href="{{ path('session') }}">Reserver un examen</a></li>
-                <li><a class="sous-menu" href="{{ path('login') }}">Connexion</a></li>
+
+                {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+
+							
+                            <li><a href="{{ path('user') }}"><img src="/assets/img/utilisateur.png"  alt="" width="25px"></a></li>
+
+							{% else %}
+
+							 <li><a class="sous-menu" href="{{ path('login') }}">Connexion</a></li>
+
+							{% endif %}
+
+
 
                 {% if is_granted('ROLE_USER') %}
-               <li><a href="{{ path('user') }}"><img src="/assets/img/utilisateur.png"  alt="" width="25px"></a></li>
+               
                 {% endif %}
             </ul>
 

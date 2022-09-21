@@ -43,6 +43,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $birthday = null;
 
+    #[ORM\ManyToOne(inversedBy: 'first_name')]
+    private ?Skill $first_name = null;
+
+    #[ORM\ManyToOne(inversedBy: 'last_name')]
+    private ?Skill $skill = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -157,6 +163,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setBirthday(\DateTimeInterface $birthday): self
     {
         $this->birthday = $birthday;
+
+        return $this;
+    }
+
+    public function getSkill(): ?Skill
+    {
+        return $this->skill;
+    }
+
+    public function setSkill(?Skill $skill): self
+    {
+        $this->skill = $skill;
 
         return $this;
     }

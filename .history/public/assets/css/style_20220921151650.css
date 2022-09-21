@@ -315,8 +315,6 @@ li{
 
 .main-container-profile {
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .profile-info,.container-right-profile {
@@ -327,18 +325,19 @@ li{
     background-color: #9A3B82;
     height: 100vh;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+}
+
+.container-right-profile img {
+    position: absolute;
+    bottom: 20%;
+    right: 15%;
 }
 
 .container-right-profile button {
+    position: absolute;
+    bottom: 10%;
+    ;
     background-color: #FFCF2D;
-    margin-top: 2em;
-    font-weight: 600;
-    padding: 0.5em;
-    border-radius: 20px;
 }
 /* Modal */
 
@@ -423,8 +422,4 @@ li{
   .illu-skill{
     height: 200px;
     width: auto;
-  }
-
-  .footer-profile {
-    border-top-right-radius: initial;
   }

@@ -328,17 +328,20 @@ li{
     height: 100vh;
     position: relative;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex
 }
 
+/* .container-right-profile img {
+    position: absolute;
+    bottom: 20%;
+    right: 15%;
+} */
+
 .container-right-profile button {
+    /* position: absolute;
+    bottom: 10%;
+    left: 34%; */
     background-color: #FFCF2D;
-    margin-top: 2em;
-    font-weight: 600;
-    padding: 0.5em;
-    border-radius: 20px;
 }
 /* Modal */
 
@@ -423,8 +426,4 @@ li{
   .illu-skill{
     height: 200px;
     width: auto;
-  }
-
-  .footer-profile {
-    border-top-right-radius: initial;
   }

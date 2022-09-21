@@ -338,7 +338,6 @@ li{
     margin-top: 2em;
     font-weight: 600;
     padding: 0.5em;
-    border-radius: 20px;
 }
 /* Modal */
 
@@ -423,8 +422,4 @@ li{
   .illu-skill{
     height: 200px;
     width: auto;
-  }
-
-  .footer-profile {
-    border-top-right-radius: initial;
   }

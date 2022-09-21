@@ -235,20 +235,20 @@ li{
     background-color: #3FB1B5;
     border-radius: 20px;
     width: 17%;
-    padding: 0.5rem;
+    padding: 0.7rem;
 }
 .dev{
     background-color: #FFCF2D;
     border-radius: 20px;
     width: 17%;
-    padding: 0.5rem;
+    padding: 0.7rem;
 }
 
 .reseau{
     background-color: #FE5244;
     border-radius: 20px;
     width: 17%;
-    padding: 0.5rem;
+    padding: 0.7rem;
 }
 
 .devops{
@@ -256,7 +256,7 @@ li{
     background-color: #9A3B82;
     border-radius: 20px;
     width: 17%;
-    padding: 0.5rem;
+    padding: 0.7rem;
 
 }
 
@@ -301,7 +301,91 @@ li{
     padding: 30px;
 }
 
-.name, .lastname, .phone{
+.name,.email, .lastname, .phone{
     display: flex;
     justify-content: space-between;
 }
+
+/* Modal */
+
+.modal, .modal2, .modal3 , .modal4  {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+  
+
+  .modal-content{
+    background-color: #3FB1B5;
+    margin: 15% auto; 
+    padding: 20px;
+    border-radius: 20px;
+    width: 50%; 
+  }
+
+  .modal-content2{
+    background-color: #FFCF2D;
+    margin: 15% auto; 
+    padding: 20px;
+    border-radius: 20px;
+    width: 50%; 
+  }
+  
+  .modal-content3{
+    background-color: #FE5244;
+    margin: 15% auto; 
+    padding: 20px;
+    border-radius: 20px;
+    width: 50%; 
+  }
+
+  .modal-content4{
+    background-color: #9A3B82;
+    margin: 15% auto; 
+    padding: 20px;
+    border-radius: 20px;
+    width: 50%; 
+  }
+
+  .close, .close2, .close3 , .close4  {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover, .close:focus,.close2:hover,.close2:focus{
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .close3:hover,.close3:focus,.close4:hover,.close4:focus{
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+small{
+    text-decoration: underline;
+    text-decoration-thickness: 0.5px;
+    cursor: pointer;
+}
+
+  .titre-exam{
+    text-align: center;
+  }
+  /* End modal */
+
+
+  .illu-skill{
+    height: 200px;
+    width: auto;
+  }

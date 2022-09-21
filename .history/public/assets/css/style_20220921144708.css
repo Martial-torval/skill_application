@@ -307,6 +307,7 @@ li{
     justify-content: space-between;
 }
 
+<<<<<<< HEAD
 .domaine a {
     text-decoration: underline!important;
     text-align: center;
@@ -325,6 +326,7 @@ li{
     background-color: #9A3B82;
     height: 100vh;
 }
+=======
 /* Modal */
 
 .modal, .modal2, .modal3 , .modal4  {
@@ -408,3 +410,4 @@ small{
     height: 200px;
     width: auto;
   }
+>>>>>>> 344084449e5b00b23877426e96856507c30bd1c7

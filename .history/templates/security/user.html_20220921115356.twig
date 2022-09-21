@@ -1,0 +1,49 @@
+{% extends "layout/default.html.twig" %}
+
+{% block body %}
+
+<section class="co">
+<div class="profile-info">
+		<h1>Mon profil</h1>
+
+	<div class="infoperso">
+
+		<div class="name">
+			<h4>Nom</h4>
+			<h4>{{user.firstName}}</h4>
+		</div>
+		<hr>
+
+
+		<div class="lastname">
+			<h4>Prenom</h4>
+			<h4>{{user.lastName}}</h4>
+		</div>
+		<hr>
+			
+		<div class="email">
+			<h4>Adresse mail</h4>
+			<h4> {{user.email}}</h4>
+		</div>
+		<hr>
+
+		<div class="phone">
+			<h4>Numero de télephone</h4>
+			<h4>{{user.phoneNumber}}</h4>
+		</div>
+		<hr>
+		
+		<div class="date">
+			<h4>Date de naissance</h4>
+			<h4>{{user.birthday | date('d/m/Y')}}</h4>
+		</div>
+		<hr>
+
+	
+		<a>Supprimer</a>
+	</div>
+</div>
+
+<div class="container-right-profile">
+</div>
+{% endblock %}

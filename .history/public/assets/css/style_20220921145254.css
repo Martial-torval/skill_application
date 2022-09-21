@@ -396,7 +396,7 @@ small{
     text-decoration: underline;
     text-decoration-thickness: 0.5px;
     cursor: pointer;
-    text-align: initial;
+    text-align: i;
 }
 
   .titre-exam{

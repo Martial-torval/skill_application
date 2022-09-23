@@ -54,6 +54,8 @@ class SecurityController extends AbstractController
         return $this->render('session/session.html.twig',['examens'=>$examens,'competences'=>$competences]);
     }
 
+   
+
 
     // #[Route('/{id}', name: 'user_delete', methods: ['POST'])]
     // public function delete(Request $request, User $user, UserRepository $userRepository): Response

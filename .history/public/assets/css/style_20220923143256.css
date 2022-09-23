@@ -272,7 +272,7 @@ li{
 .examens{
     display: flex;
     justify-content: space-around;
-    margin: 3em 0 3em 0;
+    margin: ;
 }
 
 .voir{
@@ -300,7 +300,7 @@ li{
 
 
 .section-2, .section-3{
-    padding: 30px 30px 0 30px;
+    padding: 30px;
 }
 
 .name,.email, .lastname, .phone{

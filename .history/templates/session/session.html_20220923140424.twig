@@ -7,12 +7,12 @@
 
 	<section class="section-2">
 
-		<div class="examens">		
+<div class="examens">		
 
 			{% for examen in examens | sort((a, b) => a.date <=> b.date)  %}
 			{% for competence in competences %}
 
-				{% if competence.title == "Web Design"%}
+				{% if competence.title === "Développeur We"%}
 
 				
 
@@ -33,12 +33,7 @@
 						</div>
 					</div>
 
-					{% endif %}
-
-				{% if competence.title == "Développeur Web"%}
-
-
-
+{# 
 				 <div class="dev">
 			                <div class="date">
 			                    <p>Lyon 8</p>
@@ -54,9 +49,6 @@
 			                    <a  class="signup" href="/session" >S'inscrire &gt;</a>
 			                </div>
 			            </div>
-				{% endif %}
-
-				{% if competence.title == "Système & Réseaux"%}
 
 				 <div class="reseau">
 			                <div class="date">
@@ -74,9 +66,6 @@
 			                </div>
 			            </div>
 
-						{% endif %}
-
-				{% if competence.title == "DevOps"%} 
 
 				 <div class="devops">
 			                <div class="date">
@@ -92,11 +81,8 @@
 			                    <p>Bonne question</p>
 			                   <a  class="signup" href="/session" >S'inscrire &gt;</a>
 			                </div>
-			            </div> 
-
-						{% endif %}
+			            </div> #}
 			{% endfor %}
 			{% endfor %}
-			</div>
 			
 {% endblock %}

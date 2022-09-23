@@ -1,0 +1,176 @@
+{% extends "layout/default.html.twig" %}
+
+{% block body %}
+	<div>
+		<h1 class="prochaine">Trouve ta prochaine session</h1>
+	</div>
+
+	<section class="section-2">
+
+<div class="examens">		
+
+			{% for examen in examens | sort((a, b) => a.date <=> b.date)  %}
+
+				{% if examen.title == "Web design" %}
+
+				
+					<div class="design">
+						<div class="date">
+							<p>{{examen.city}}</p>
+							<p>{{examen.date| date('d/m/Y')}}</p>
+						</div>
+						<div class="image">
+							<img src="/assets/img/Group 21.svg" alt="">
+						</div>
+						<hr>
+						<div class="domaine">
+							<p>{{examen.title}}</p>
+							<p>{{examen.subtitle}}</p>
+							<a class="signup" href="/session">S'inscrire &gt;</a>
+						</div>
+					</div>
+
+
+                {% if examen.title == "Web design"%}
+
+					<div class="dev">
+						<div class="date">
+							<p>{{examen.city}}</p>
+							<p>{{examen.date| date('d/m/Y')}}</p>
+						</div>
+						<div class="image">
+							<img src="/assets/img/Group 21.svg" alt="">
+						</div>
+						<hr>
+						<div class="domaine">
+							<p>{{examen.title}}</p>
+							<p>{{examen.subtitle}}</p>
+							<a class="signup" href="/session">S'inscrire &gt;</a>
+						</div>
+					</div>
+
+				{% endif %}
+
+			{% endfor %}
+			{# <div class="dev">
+			                <div class="date">
+			                    <p>Lyon 8</p>
+			                    <p>25/09/2022</p>
+			                </div>
+			                <div class="image">
+			                    <img src="/assets/img/Group 21.svg" alt="">
+			                </div>
+			                <hr>
+			                <div class="domaine">
+			                    <p>Développement Web</p>
+			                    <p>Angular</p>
+			                    <a  class="signup" href="/session" >S'inscrire &gt;</a>
+			                </div>
+			            </div>
+			
+			            <div class="reseau">
+			                <div class="date">
+			                    <p>Lyon 6</p>
+			                    <p>22/09/2022</p>
+			                </div>
+			                <div class="image">
+			                    <img src="/assets/img/Group 21.svg" alt="">
+			                </div>
+			                <hr>
+			                <div class="domaine">
+			                    <p>Système et réseaux</p>
+			                    <p>Switch</p>
+			                    <a  class="signup" href="/session" >S'inscrire &gt;</a>
+			                </div>
+			            </div>
+			
+			            <div class="devops">
+			                <div class="date">
+			                    <p>Lyon 6</p>
+			                    <p>22/09/2022</p>
+			                </div>
+			                <div class="image">
+			                    <img src="/assets/img/Group 21.svg" alt="">
+			                </div>
+			                <hr>
+			                <div class="domaine">
+			                    <p>DevOps</p>
+			                    <p>Bonne question</p>
+			                   <a  class="signup" href="/session" >S'inscrire &gt;</a>
+			                </div>
+			            </div>#}
+		</div>
+
+	</section>
+
+	{# <section class="section-3">
+	
+	        <div class="examens">
+	
+	            <div class="design">
+	                <div class="date">
+	                    <p>Lyon 6</p>
+	                    <p>22/09/2022</p>
+	                </div>
+	                <div class="image">
+	                    <img src="/assets/img/Group 21.svg" alt="">
+	                </div>
+	                <hr>
+	                <div class="domaine">
+	                    <p>Web Design</p>
+	                    <p>UX / UI</p>
+	                    <a class="signup" href="/session" >S'inscrire &gt;</a>
+	                </div>
+	            </div>
+	
+	            <div class="dev">
+	                <div class="date">
+	                    <p>Lyon 8</p>
+	                    <p>25/09/2022</p>
+	                </div>
+	                <div class="image">
+	                    <img src="/assets/img/Group 21.svg" alt="">
+	                </div>
+	                <hr>
+	                <div class="domaine">
+	                    <p>Développement Web</p>
+	                    <p>Angular</p>
+	                    <a class="signup" href="/session">S'inscrire &gt;</a>
+	                </div>
+	            </div>
+	
+	            <div class="reseau">
+	                <div class="date">
+	                    <p>Lyon 6</p>
+	                    <p>22/09/2022</p>
+	                </div>
+	                <div class="image">
+	                    <img src="/assets/img/Group 21.svg" alt="">
+	                </div>
+	                <hr>
+	                <div class="domaine">
+	                    <p>Système et réseaux</p>
+	                    <p>Switch</p>
+	                    <a  class="signup" href="/session">S'inscrire &gt;</a>
+	                </div>
+	            </div>
+	
+	            <div class="devops">
+	                <div class="date">
+	                    <p>Lyon 6</p>
+	                    <p>22/09/2022</p>
+	                </div>
+	                <div class="image">
+	                    <img src="/assets/img/Group 21.svg" alt="">
+	                </div>
+	                <hr>
+	                <div class="domaine">
+	                    <p>DevOps</p>
+	                    <p>Bonne question</p>
+	                    <a class="signup" href="/session">S'inscrire &gt;</a>
+	                </div>
+	            </div>
+	        </div>
+	       
+	    </section> #}
+{% endblock %}

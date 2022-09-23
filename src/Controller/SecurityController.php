@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\User;
+use App\Repository\ExamensRepository;
 use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Mapping\Entity;
@@ -43,6 +44,13 @@ class SecurityController extends AbstractController
         return $this->render('security/user.html.twig',['user'=>$user]);
     }
 
+
+    #[Route(path: '/session', name: 'session')]
+    public function examens(ExamensRepository $repo): Response
+    {
+        $examens = $repo->findAll();
+        return $this->render('session/session.html.twig',['examens'=>$examens]);
+    }
 
 
     // #[Route('/{id}', name: 'user_delete', methods: ['POST'])]

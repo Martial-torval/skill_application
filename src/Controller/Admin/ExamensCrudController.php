@@ -2,18 +2,16 @@
 
 namespace App\Controller\Admin;
 
-use App\Entity\Skill;
+use App\Entity\Examens;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
-class SkillCrudController extends AbstractCrudController
+class ExamensCrudController extends AbstractCrudController
 {
     public static function getEntityFqcn(): string
     {
-        return Skill::class;
+        return Examens::class;
     }
 
     
@@ -22,8 +20,9 @@ class SkillCrudController extends AbstractCrudController
         return [
             TextField::new('title'),
             TextField::new('subtitle'),
-            TextField::new('ville'),
+            TextField::new('city'),
             DateTimeField::new('date'),
         ];
     }
+    
 }

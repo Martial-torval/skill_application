@@ -5,13 +5,10 @@ namespace App\Entity;
 use App\Repository\UserRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
-#[ORM\Table(name: '`user`')]
-#[UniqueEntity(fields: ['firstName'], message: 'There is already an account with this firstName')]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
@@ -20,7 +17,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?int $id = null;
 
     #[ORM\Column(length: 180, unique: true)]
-    private ?string $firstName = null;
+    private ?string $email = null;
 
     #[ORM\Column]
     private array $roles = [];
@@ -35,7 +32,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?string $lastName = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $email = null;
+    private ?string $firstName = null;
 
     #[ORM\Column]
     private ?int $phoneNumber = null;
@@ -43,25 +40,19 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $birthday = null;
 
-    #[ORM\ManyToOne(inversedBy: 'first_name')]
-    private ?Skill $first_name = null;
-
-    #[ORM\ManyToOne(inversedBy: 'last_name')]
-    private ?Skill $skill = null;
-
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getFirstName(): ?string
+    public function getEmail(): ?string
     {
-        return $this->firstName;
+        return $this->email;
     }
 
-    public function setFirstName(string $firstName): self
+    public function setEmail(string $email): self
     {
-        $this->firstName = $firstName;
+        $this->email = $email;
 
         return $this;
     }
@@ -73,7 +64,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     public function getUserIdentifier(): string
     {
-        return (string) $this->firstName;
+        return (string) $this->email;
     }
 
     /**
@@ -131,14 +122,14 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function getEmail(): ?string
+    public function getFirstName(): ?string
     {
-        return $this->email;
+        return $this->firstName;
     }
 
-    public function setEmail(string $email): self
+    public function setFirstName(string $firstName): self
     {
-        $this->email = $email;
+        $this->firstName = $firstName;
 
         return $this;
     }
@@ -166,18 +157,4 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
         return $this;
     }
-
-    public function getSkill(): ?Skill
-    {
-        return $this->skill;
-    }
-
-    public function setSkill(?Skill $skill): self
-    {
-        $this->skill = $skill;
-
-        return $this;
-    }
-
-   
 }

@@ -1,0 +1,148 @@
+{% extends "layout/default.html.twig" %}
+
+{% block body %}
+	<section class="section-1">
+		<h1 class="confirme">Confirme tes compétences en
+			<span class="typewrite" data-period="2000" data-type='[ "web design","developpement web","système et réseaux","devOps" ]'></span>
+		</h1>
+		<div class="illustration">
+			<img src="/assets/img/illu.svg" alt="" width="700px">
+		</div>
+	</section>
+
+	<div class="ensavoirplus">
+		<p><img src="/assets/img/arrow.png" alt="" width="15px">
+			En savoir plus</p>
+	</div>
+
+	<section class="section-2">
+
+
+		<h1 class="prochaine">Les prochaines sessions</h1>
+			<div class="examens">
+		{% for examen in examens %}
+		
+				{% if competence.title == "Web Design"%}
+					<div class="design">
+						<div class="date">
+							<p>{{examen.city}}</p>
+							<p>{{examen.date| date('d/m/Y')}}</p>
+						</div>
+
+						<div class="image">
+							<img class="illu-skill" src="/assets/img/70.svg" alt="">
+						</div>
+						<hr>
+						<div class="domaine">
+							<p>{{examen.competences.title}}</p>
+							<p>{{examen.competences.subtitle}}</p>
+							<a id="webdesign">
+								<small class="plus">En savoir plus</small>
+							</a>
+							<div id="myModal" class="modal">
+								<div class="modal-content">
+									<span class="close">&times;</span>
+									<h3 class="titre-exam">{{examen.competences.title}}</h3>
+									<p>{{examen.competences.description}}</p>																													Vous l’aurez compris ! Au delà de l’aspect graphique, le maquettage sert surtout à créer une harmonie entre ergonomie, design et expérience utilisateur (UX). C’est aussi une étape cruciale de collaboration entre tous les membres de l’équipe de conception.</p>
+								</div>
+							</div>
+						</div>
+
+				{% if competence.title == "Développeur Web"%}
+				<div class="dev">
+						<div class="date">
+							<p>{{examen.city}}</p>
+							<p>{{examen.date}}</p>
+						</div>
+
+						<div class="image">
+							<img class="illu-skill" src="/assets/img/70.svg" alt="">
+						</div>
+						<hr>
+						<div class="domaine">
+							<p>{{competence.title}}</p>
+							<p>{{competence.subtitle}}</p>
+							<a id="devweb">
+								<small class="plus">En savoir plus</small>
+							</a>
+							<div id="myModal2" class="modal2">
+								<div class="modal-content2">
+									<span class="close2">&times;</span>
+									<h3 class="titre-exam">Développement Web</h3>
+									<p>Lorem ipsum dolor sit amet consectetur, adipisicing eli.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					{% endif %}
+
+				{% if competence.title == "Système & Réseaux" %}
+
+					<div class="reseau">
+						<div class="date">
+							<p>Lyon 6</p>
+							<p>22/09/2022</p>
+						</div>
+
+						<div class="image">
+							<img class="illu-skill" src="/assets/img/70.svg" alt="">
+						</div>
+						<hr>
+						<div class="domaine">
+							<p>Système et réseaux</p>
+							<p>Switch</p>
+							<a id="setr">
+								<small class="plus">En savoir plus</small>
+							</a>
+							<div id="myModal3" class="modal3">
+								<div class="modal-content3">
+									<span class="close3">&times;</span>
+									<h3 class="titre-exam">Système et réseaux</h3>
+									<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+																																																										                                 Magnam possimus, eos dignissimos labore ea eum facere rerum 
+																																																										                                 aliquam voluptatibus asperiores ratione consectetur 
+																																																										                                 fuga id est qui harum facilis at neque.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					{% endif %}
+
+				{% if competence.title == "Dev Ops" %}
+				<div class="devops">
+						<div class="date">
+							<p>Lyon 6</p>
+							<p>22/09/2022</p>
+						</div>
+
+						<div class="image">
+							<img class="illu-skill" src="/assets/img/70.svg" alt="">
+						</div>
+						<hr>
+						<div class="domaine">
+							<p>DevOps</p>
+							<p>Shell scripting</p>
+							<a id="devops">
+								<small class="plus">En savoir plus</small>
+							</a>
+							<div id="myModal4" class="modal4">
+								<div class="modal-content4">
+									<span class="close4">&times;</span>
+									<h3 class="titre-exam">DevOps</h3>
+									<p></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+	{% endfor %}
+					</div>
+					</section>
+
+	<div class="voir">
+		<a href="{{path('session')}}">
+			<p>Voir tous les examens ></p>
+		</a>
+	</div>
+
+{% endblock %}

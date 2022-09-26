@@ -1,0 +1,92 @@
+{% extends "layout/default.html.twig" %}
+
+{% block body %}
+	<div>
+		<h1 class="prochaine">Trouve ta prochaine session</h1>
+	</div>
+
+
+	<section class="section-2">
+
+		<div class="allExams col-12">
+
+			{% for examen in examens | sort((a, b) => a.date <=> b.date)  %}
+				{% for competence in competences %}
+					{% if competence.title == "Web Design"%}
+						<div class="design col-4">
+						{% endif %}
+						
+							<div class="date">
+								<p>{{examen.city}}</p>
+								<p>{{examen.date| date('d/m/Y')}}</p>
+							</div>
+							<div class="image">
+								<img src="/assets/img/Group 21.svg" alt="">
+							</div>
+							<hr>
+							<div class="domaine">
+								<p>{{competence.title}}</p>
+								<p>{{competence.subtitle}}</p>
+								<a class="signup" href="/session">S'inscrire &gt;</a>
+							</div>
+						</div>
+
+						{% elseif competence.title =="Développeur Web"%}
+
+						<div class="dev col-4">
+							<div class="date">
+								<p>{{examen.city}}</p>
+								<p>{{examen.date| date('d/m/Y')}}</p>
+							</div>
+							<div class="image">
+								<img src="/assets/img/Group 21.svg" alt="">
+							</div>
+							<hr>
+							<div class="domaine">
+								<p>{{competence.title}}</p>
+								<p>{{competence.subtitle}}</p>
+								<a class="signup" href="/session">S'inscrire &gt;</a>
+							</div>
+						</div>
+					{% elseif competence.title == "Système & Réseaux" %}
+
+						<div class="reseau col-4">
+							<div class="date">
+								<p>{{examen.city}}</p>
+								<p>{{examen.date| date('d/m/Y')}}</p>
+							</div>
+							<div class="image">
+								<img src="/assets/img/Group 21.svg" alt="">
+							</div>
+							<hr>
+							<div class="domaine">
+								<p>{{competence.title}}</p>
+								<p>{{competence.subtitle}}</p>
+								<a class="signup" href="/session">S'inscrire &gt;</a>
+							</div>
+						</div>
+
+					{% elseif competence.title == "DevOps" %}
+						<div class="devops col-4">
+							<div class="date">
+								<p>{{examen.city}}</p>
+								<p>{{examen.date| date('d/m/Y')}}</p>
+							</div>
+							<div class="image">
+								<img src="/assets/img/Group 21.svg" alt="">
+							</div>
+							<hr>
+							<div class="domaine">
+								<p>{{competence.title}}</p>
+								<p>{{competence.subtitle}}</p>
+								<a class="signup" href="/session">S'inscrire &gt;</a>
+							</div>
+						</div>
+
+					{% endif %}
+				{% endfor %}
+			{% endfor %}
+			</div>
+
+
+		{% endblock %}

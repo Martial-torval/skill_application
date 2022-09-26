@@ -1,0 +1,148 @@
+{% extends "layout/default.html.twig" %}
+
+{% block body %}
+	<section class="section-1">
+		<h1 class="confirme">Confirme tes compétences en
+			<span class="typewrite" data-period="2000" data-type='[ "web design","developpement web","système et réseaux","devOps" ]'></span>
+		</h1>
+		<div class="illustration">
+			<img src="/assets/img/illu.svg" alt="" width="700px">
+		</div>
+	</section>
+
+	<div class="ensavoirplus">
+		<p><img src="/assets/img/arrow.png" alt="" width="15px">
+			En savoir plus</p>
+	</div>
+
+	<section class="section-2">
+
+
+		<div class="examens">
+			{% for examen in examens %}
+				{% for competence in competences %}
+				
+					{% if competence.title == "Web Design"%}
+						<div class="design">
+							<div class="date">
+								<p>{{examen.city}}</p>
+								<p>{{examen.date| date('d/m/Y')}}</p>
+							</div>
+
+							<div class="image">
+								<img class="illu-skill" src="/assets/img/70.svg" alt="">
+							</div>
+							<hr>
+							<div class="domaine">
+								<p>{{examen.competences.title}}</p>
+								<p>{{examen.competences.subtitle}}</p>
+								<a id="webdesign">
+									<small class="plus">En savoir plus</small>
+								</a>
+								<div id="myModal" class="modal">
+									<div class="modal-content">
+										<span class="close">&times;</span>
+										<h3 class="titre-exam">{{examen.competences.title}}</h3>
+										<p>{{examen.competences.description}}</p>
+										Vous l’aurez compris ! Au delà de l’aspect graphique, le maquettage sert surtout à créer une harmonie entre ergonomie, design et expérience utilisateur (UX). C’est aussi une étape cruciale de collaboration entre tous les membres de l’équipe de conception.</p>
+								</div>
+							</div>
+						</div>
+					{% endif %}
+
+					{# {% if competence.title == "Développeur Web"%}
+						<div class="dev">
+							<div class="date">
+								<p>{{examen.city}}</p>
+								<p>{{examen.date| date('d/m/Y')}}</p>
+							</div>
+
+							<div class="image">
+								<img class="illu-skill" src="/assets/img/70.svg" alt="">
+							</div>
+							<hr>
+							<div class="domaine">
+								<p>{{examen.competences.title}}</p>
+								<p>{{examen.competences.subtitle}}</p>
+								<a id="webdesign">
+									<small class="plus">En savoir plus</small>
+								</a>
+								<div id="myModal" class="modal">
+									<div class="modal-content">
+										<span class="close">&times;</span>
+										<h3 class="titre-exam">{{examen.competences.title}}</h3>
+										<p>{{examen.competences.description}}</p>
+										Vous l’aurez compris ! Au delà de l’aspect graphique, le maquettage sert surtout à créer une harmonie entre ergonomie, design et expérience utilisateur (UX). C’est aussi une étape cruciale de collaboration entre tous les membres de l’équipe de conception.</p>
+								</div>
+							</div>
+						</div>
+					{% endif %}
+
+					{% if competence.title == "Système & Réseaux" %}
+
+						<div class="reseau">
+							<div class="date">
+								<p>{{examen.city}}</p>
+								<p>{{examen.date| date('d/m/Y')}}</p>
+							</div>
+
+							<div class="image">
+								<img class="illu-skill" src="/assets/img/70.svg" alt="">
+							</div>
+							<hr>
+							<div class="domaine">
+								<p>{{examen.competences.title}}</p>
+								<p>{{examen.competences.subtitle}}</p>
+								<a id="webdesign">
+									<small class="plus">En savoir plus</small>
+								</a>
+								<div id="myModal" class="modal">
+									<div class="modal-content">
+										<span class="close">&times;</span>
+										<h3 class="titre-exam">{{examen.competences.title}}</h3>
+										<p>{{examen.competences.description}}</p>
+										Vous l’aurez compris ! Au delà de l’aspect graphique, le maquettage sert surtout à créer une harmonie entre ergonomie, design et expérience utilisateur (UX). C’est aussi une étape cruciale de collaboration entre tous les membres de l’équipe de conception.</p>
+								</div>
+							</div>
+						</div>
+					{% endif %}
+
+					{% if competence.title == "Dev Ops" %}
+						<div class="devops">
+							<div class="date">
+								<p>{{examen.city}}</p>
+								<p>{{examen.date| date('d/m/Y')}}</p>
+							</div>
+
+							<div class="image">
+								<img class="illu-skill" src="/assets/img/70.svg" alt="">
+							</div>
+							<hr>
+							<div class="domaine">
+								<p>{{examen.competences.title}}</p>
+								<p>{{examen.competences.subtitle}}</p>
+								<a id="webdesign">
+									<small class="plus">En savoir plus</small>
+								</a>
+								<div id="myModal" class="modal">
+									<div class="modal-content">
+										<span class="close">&times;</span>
+										<h3 class="titre-exam">{{examen.competences.title}}</h3>
+										<p>{{examen.competences.description}}</p>
+										Vous l’aurez compris ! Au delà de l’aspect graphique, le maquettage sert surtout à créer une harmonie entre ergonomie, design et expérience utilisateur (UX). C’est aussi une étape cruciale de collaboration entre tous les membres de l’équipe de conception.</p>
+								</div>
+							</div>
+						</div>
+					{% endif %} #}
+				{% endfor %}
+			{% endfor %}
+		</div>
+	</section>
+
+	<div class="voir">
+		<a href="{{path('session')}}">
+			<p>Voir tous les examens ></p>
+		</a>
+	</div>
+
+{% endblock %}

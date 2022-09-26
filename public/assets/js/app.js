@@ -78,7 +78,7 @@ window.onclick = function(event) {
 
 
 var modal2 = document.getElementById("myModal2");
-var btn = document.getElementById("devweb");
+var btn = document.getElementById("dev");
 var span = document.getElementsByClassName("close2")[0];
 
 btn.onclick = function() {

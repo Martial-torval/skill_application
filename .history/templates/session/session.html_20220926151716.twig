@@ -1,0 +1,45 @@
+{% extends "layout/default.html.twig" %}
+
+{% block body %}
+	<div>
+		<h1 class="prochaine">Trouve ta prochaine session</h1>
+	</div>
+
+
+	<section class="section-2">
+
+		<div class="allExams col-12">
+
+			{% for examen in examens | sort((a, b) => a.date <=> b.date)  %}
+					{% if examen.competences.title == "Web Design"%}
+						<div class="design col-4">
+					{% elseif examen.competences.title =="Développeur Web"%}
+						<div class="dev col-4">
+						{% elseif examen.competences.title =="Système & Réseaux" %}
+						<div class="reseau col-4">
+						{% elseif examen.competences.title =="DevOps" %}
+						<div class="devops col-4">
+						{% endif %}
+							<div class="date">
+								<p>{{examen.city}}</p>
+								<p>{{examen.date| date('d/m/Y')}}</p>
+							</div>
+							<div class="image">
+								<img src="/assets/img/Group 21.svg" alt="">
+							</div>
+							<hr>
+							<div class="domaine">
+								<p>{{examen.competences.title}}</p>
+								<p>{{examen.competences.subtitle}}</p>
+								<form action="" method="post">
+								    <a href="/sessi" class="text-decoration-none color-dark"> <button class="btn btn-dark">More...</button></a>
+								</form>
+								{# <p>{{users.firstName}}</p> #}
+							</div>
+						</div>
+
+				{% endfor %}
+			</div>
+
+
+		{% endblock %}

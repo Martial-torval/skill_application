@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
@@ -39,6 +41,14 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $birthday = null;
+
+    #[ORM\OneToMany(mappedBy: 'User', targetEntity: Inscription::class)]
+    private Collection $id_inscriptions;
+
+    public function __construct()
+    {
+        $this->id_inscriptions = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -154,6 +164,36 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setBirthday(\DateTimeInterface $birthday): self
     {
         $this->birthday = $birthday;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Inscription>
+     */
+    public function getIdInscriptions(): Collection
+    {
+        return $this->id_inscriptions;
+    }
+
+    public function addIdInscription(Inscription $idInscription): self
+    {
+        if (!$this->id_inscriptions->contains($idInscription)) {
+            $this->id_inscriptions->add($idInscription);
+            $idInscription->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeIdInscription(Inscription $idInscription): self
+    {
+        if ($this->id_inscriptions->removeElement($idInscription)) {
+            // set the owning side to null (unless already changed)
+            if ($idInscription->getUser() === $this) {
+                $idInscription->setUser(null);
+            }
+        }
 
         return $this;
     }

@@ -1,0 +1,43 @@
+{% extends 'layout/default.html.twig' %}
+
+{% block body %}
+<h2> Mon historique </h2>
+<h3> Mes examens à venir </h3>
+{% for exam in exams %}
+
+{% if inscriptions.exa.title == "Web Design"%}
+						<div class="design col-4">
+					{% elseif exam.competences.title =="Développeur Web"%}
+						<div class="dev col-4">
+						{% elseif exam.competences.title =="Système & Réseaux" %}
+						<div class="reseau col-4">
+						{% elseif exam.competences.title =="DevOps" %}
+						<div class="devops col-4">
+						{% endif %}
+							<div class="date">
+								<p>{{exam.city}}</p>
+								<p>{{exam.date| date('d/m/Y')}}</p>
+							</div>
+							<div class="image">
+								<img src="/assets/img/Group 21.svg" alt="">
+							</div>
+							<hr>
+							<div class="domaine">
+								<p>{{exam.competences.title}}</p>
+								<p>{{exam.competences.subtitle}}</p>
+								<form action="/session/{{exam.id}}" method="post" class="form-registerExam">
+									{% if exam.getIdExamens|length < 6 %}
+									 <button class="btnRegisterToExam" name="submit">S'inscrire &rsaquo;</button>
+									<span>{{ exam.getIdExamens|length }} / 5 </span>
+									{% else %}
+									<span>Examen complet ! </span>
+									<span>{{ exam.getIdExamens|length }} / 5 </span>
+									{% endif %}
+								</form>
+											
+							</div>
+						</div>
+
+{% endfor %}
+
+{% endblock %}

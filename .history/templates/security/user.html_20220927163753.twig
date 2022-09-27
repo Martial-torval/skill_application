@@ -1,0 +1,88 @@
+{% extends "layout/default2.html.twig" %}
+
+{% block body %}
+
+<section class="main-container-profile">
+	<div class="profile-info">
+		<h1>Mon profil</h1>
+
+		<div class="infoperso">
+
+			<div class="name">
+				<h4>Nom</h4>
+				<h4>{{user.firstName}}</h4>
+			</div>
+			<hr>
+
+
+			<div class="lastname">
+				<h4>Prenom</h4>
+				<h4>{{user.lastName}}</h4>
+			</div>
+			<hr>
+
+			<div class="email">
+				<h4>Adresse mail</h4>
+				<h4>
+					{{user.email}}</h4>
+			</div>
+			<hr>
+
+			<div class="phone">
+				<h4>Numero de télephone</h4>
+				<h4>{{user.phoneNumber}}</h4>
+			</div>
+			<hr>
+
+			<div class="date">
+				<h4>Date de naissance</h4>
+				<h4>{{user.birthday | date('d/m/Y')}}</h4>
+			</div>
+			<hr>
+
+			<form action="/user/{{user.id}}" method="POST">
+				<button class="btnRegisterToExam">Supprimer</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="container-right-profile">
+		<img src="/assets/img/illu_profile.svg" alt="illustration profile page">
+		<a href="/historique/{{user.id}} ca">Mon historique d'examens</a>
+	</div>
+</section>
+<footer class="footer-profile">
+	<div class="description">
+		<img src="/assets/img/mortarboard.png" alt="" width="30px">
+		<p>Join the more than 100,000 creators who use Teachable to share their knowledge.
+			                Easily create an online course or coaching business with our powerful yet simple
+			                all-in-one platform.</p>
+	</div>
+
+	<div class="structure">
+
+		<ul>
+			<h4>Structure du site</h4>
+			<li>Reserver un examen</li>
+			<a href="{{ path('register') }}">
+				<li>Inscription</li>
+			</a>
+			<li>Connexion</li>
+		</ul>
+
+	</div>
+
+	<div class="contact">
+
+		<ul>
+			<h4>Contact</h4>
+			<li>+33(0) 9 75 38 64 50</li>
+			<li>31 rue Thiers, 69 006 Lyon</li>
+			<li>Facebook</li>
+			<li>Instagram</li>
+		</ul>
+
+
+	</div>
+
+</footer {% endblock %}

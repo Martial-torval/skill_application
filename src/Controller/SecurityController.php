@@ -11,6 +11,7 @@ use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
@@ -40,21 +41,29 @@ class SecurityController extends AbstractController
     #[Route(path: '/security/user', name: 'user')]
     public function user(): Response
     {
-        
+        $user = $this->getUser();
         return $this->render('security/user.html.twig',['user'=>$user]);
+    }
+
+    #[Route('/user/{id}', methods:['POST'])]
+
+    public function delete( $id, UserRepository $repo, ){
+
+        $user = $repo->find($id);
+        $repo->remove($user, true);
+        $session = new Session();
+        $session->invalidate();
+        
+        return $this->redirectToRoute('login');
+        
     }
 
 
      #[Route(path: '/session', name: 'session')]
     public function examens(ExamensRepository $repo, CompetencesRepository $repo2): Response
     {        
-        // $inscription = New Inscription();
-        // $repo3->add($inscription,true);
-        // $user = $this->getUser();
-        // dd($user);
 
         $examens = $repo->findAll();
-
         $competences = $repo2->findAll();
         return $this->render('session/session.html.twig',['examens'=>$examens,'competences'=>$competences]);
     }
@@ -62,6 +71,7 @@ class SecurityController extends AbstractController
 
    #[Route('session/{id}', name: 'show', methods:'POST')]
 public function show($id, ExamensRepository $repo, InscriptionRepository $repo2) {
+
     $inscription = new Inscription();
     $user = $this->getUser();
     $examens = $repo->find($id);

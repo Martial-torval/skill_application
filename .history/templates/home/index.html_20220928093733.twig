@@ -1,0 +1,256 @@
+{% extends "layout/default.html.twig" %}
+
+{% block body %}
+	<section class="section-1">
+		<h1 class="confirme">Confirme tes compétences en <br>
+			<span class="typewrite" data-period="2000" data-type='[ "web design","developpement web","système et réseaux","devOps" ]'></span>
+		</h1>
+		<div class="illustration">
+			<img src="/assets/img/illu.svg" alt="" width="700px">
+		</div>
+	</section>
+
+	<div class="ensavoirplus">
+		<p><img src="/assets/img/arrow.png" alt="" width="15px">
+			En savoir plus</p>
+	</div>
+
+	<h1 class="prochaine">Les prochaines sessions</h1>
+
+	<section class="section-2">
+
+	
+
+
+		<div class="examens">
+
+			{% for examen in examens | sort((a, b) => a.date <=> b.date) %}
+
+				{% if loop.index < 5 %}
+					{% if examen.competences.title == "Web Design" and examen.date >= "now"|date("m/d/Y") %}
+						<div class="design">
+							<div class="date">
+								<p>{{examen.city}}</p>
+								<p>{{examen.date| date('d/m/Y')}}</p>
+							</div>
+							<div class="image">
+								<img src="/assets/img/Group 21.svg" alt="">
+							</div>
+							<hr>
+							<div class="domaine">
+								<p>{{examen.competences.title}}</p>
+								<p>{{examen.competences.subtitle}}</p>
+								<a id="webdesign">
+									<small class="plus">En savoir plus</small>
+								</a>
+
+								<div id="myModal" class="modal">
+									<div class="modal-content">
+										<span class="close">&times;</span>
+										<h3 class="titre-exam">{{examen.competences.title}}</h3>
+										<p>{{examen.competences.description}}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				{# {% else %}
+				<div class="d-none">
+							<div class="date">
+								<p>{{examen.city}}</p>
+								<p>{{examen.date| date('d/m/Y')}}</p>
+							</div>
+							<div class="image">
+								<img src="/assets/img/Group 21.svg" alt="">
+							</div>
+							<hr>
+							<div class="domaine">
+								<p>{{examen.competences.title}}</p>
+								<p>{{examen.competences.subtitle}}</p>
+								<a id="webdesign">
+									<small class="plus">En savoir plus</small>
+								</a>
+
+								<div id="myModal" class="modal">
+									<div class="modal-content">
+										<span class="close">&times;</span>
+										<h3 class="titre-exam">{{examen.competences.title}}</h3>
+										<p>{{examen.competences.description}}</p>
+								</div>
+							</div>
+						</div>
+					</div> #}
+				{% endif %}
+
+				{% if examen.competences.title == "Développeur Web" and examen.date >= "now"|date("m/d/Y") %}
+					<div class="dev">
+						<div class="date">
+							<p>{{examen.city}}</p>
+							<p>{{examen.date| date('d/m/Y')}}</p>
+						</div>
+						<div class="image">
+							<img src="/assets/img/Group 21.svg" alt="">
+						</div>
+						<hr>
+						<div class="domaine">
+							<p>{{examen.competences.title}}</p>
+							<p>{{examen.competences.subtitle}}</p>
+							<a id="dev">
+								<small class="plus">En savoir plus</small>
+							</a>
+							<div id="myModal2" class="modal2">
+                                    <div class="modal-content2">
+                                        <span class="close2">&times;</span>
+                                        <h3 class="titre-exam">{{examen.competences.title}}</h3>
+                                        <p>{{examen.competences.description}}</p>
+                                </div>
+                            </div>
+						</div>
+					</div>
+				{# {% else %}
+					<div class="d-none">
+							<div class="date">
+								<p>{{examen.city}}</p>
+								<p>{{examen.date| date('d/m/Y')}}</p>
+							</div>
+							<div class="image">
+								<img src="/assets/img/Group 21.svg" alt="">
+							</div>
+							<hr>
+							<div class="domaine">
+								<p>{{examen.competences.title}}</p>
+								<p>{{examen.competences.subtitle}}</p>
+								<a id="webdesign">
+									<small class="plus">En savoir plus</small>
+								</a>
+
+								<div id="myModal" class="modal">
+									<div class="modal-content">
+										<span class="close">&times;</span>
+										<h3 class="titre-exam">{{examen.competences.title}}</h3>
+										<p>{{examen.competences.description}}</p>
+								</div>
+							</div>
+						</div>
+					</div> #}
+				{% endif %}
+
+				{% if examen.competences.title == "Système & Réseaux" and examen.date >= "now"|date("m/d/Y") %}
+					<div class="reseau">
+						<div class="date">
+							<p>{{examen.city}}</p>
+							<p>{{examen.date| date('d/m/Y')}}</p>
+						</div>
+						<div class="image">
+							<img src="/assets/img/Group 21.svg" alt="">
+						</div>
+						<hr>
+						<div class="domaine">
+							<p>{{examen.competences.title}}</p>
+							<p>{{examen.competences.subtitle}}</p>
+							<a id="setr">
+								<small class="plus">En savoir plus</small>
+							</a>
+							<div id="myModal3" class="modal3">
+                                    <div class="modal-content3">
+                                        <span class="close3">&times;</span>
+                                        <h3 class="titre-exam">{{examen.competences.title}}</h3>
+                                        <p>{{examen.competences.description}}</p>
+                                </div>
+                            </div>
+						</div>
+					</div>
+				{# {% else %}
+					<div class="d-none">
+							<div class="date">
+								<p>{{examen.city}}</p>
+								<p>{{examen.date| date('d/m/Y')}}</p>
+							</div>
+							<div class="image">
+								<img src="/assets/img/Group 21.svg" alt="">
+							</div>
+							<hr>
+							<div class="domaine">
+								<p>{{examen.competences.title}}</p>
+								<p>{{examen.competences.subtitle}}</p>
+								<a id="webdesign">
+									<small class="plus">En savoir plus</small>
+								</a>
+
+								<div id="myModal" class="modal">
+									<div class="modal-content">
+										<span class="close">&times;</span>
+										<h3 class="titre-exam">{{examen.competences.title}}</h3>
+										<p>{{examen.competences.description}}</p>
+								</div>
+							</div>
+						</div>
+					</div> #}
+				{% endif %}
+
+				{% if examen.competences.title == "DevOps" and examen.date| date('d/m/Y') >= "now"|date("m/d/Y") %}
+					<div class="devops">
+						<div class="date">
+							<p>{{examen.city}}</p>
+							<p>{{examen.date| date('d/m/Y')}}</p>
+						</div>
+						<div class="image">
+							<img src="/assets/img/Group 21.svg" alt="">
+						</div>
+						<hr>
+						<div class="domaine">
+							<p>{{examen.competences.title}}</p>
+							<p>{{examen.competences.subtitle}}</p>
+							<pre>
+								{{ dump(examen.date | da) }}
+							</pre>
+							<a id="devops">
+								<small class="plus">En savoir plus</small>
+							</a>
+							<div id="myModal4" class="modal4">
+                                    <div class="modal-content4">
+                                        <span class="close4">&times;</span>
+                                        <h3 class="titre-exam">{{examen.competences.title}}</h3>
+                                        <p>{{examen.competences.description}}</p>
+                                </div>
+                            </div>
+						</div>
+					</div>
+					 {% else %}
+						<div class="d-none">
+							<div class="date">
+								<p>{{examen.city}}</p>
+								<p>{{examen.date| date('d/m/Y')}}</p>
+							</div>
+							<div class="image">
+								<img src="/assets/img/Group 21.svg" alt="">
+							</div>
+							<hr>
+							<div class="domaine">
+								<p>{{examen.competences.title}}</p>
+								<p>{{examen.competences.subtitle}}</p>
+								<a id="webdesign">
+									<small class="plus">En savoir plus</small>
+								</a>
+
+								<div id="myModal" class="modal">
+									<div class="modal-content">
+										<span class="close">&times;</span>
+										<h3 class="titre-exam">{{examen.competences.title}}</h3>
+										<p>{{examen.competences.description}}</p>
+								</div>
+							</div>
+						</div>
+					</div> 
+			{% endif %}
+			{% endif %}
+		{% endfor %}
+
+	</section>
+
+	<div class="voir">
+		<a href="{{path('session')}}">
+			<p>Voir tous les examens ></p>
+		</a>
+	</div>
+
+{% endblock %}

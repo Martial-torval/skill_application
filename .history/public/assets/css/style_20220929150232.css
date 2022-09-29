@@ -1,0 +1,529 @@
+* {
+    font-family: 'Space Mono', monospace;
+}
+
+body{
+    margin:auto
+}
+
+
+header {
+    position: absolute;
+    top: 0;
+}
+
+.logo {
+    margin-left: 1.5rem;
+}
+
+
+.menu li:nth-child(2) {
+    margin-left: 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98vw;
+    }
+
+.sous-menu{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+
+.menu{
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/*LOGIN FORM */
+
+h2,h3 {
+    padding : 2em 0 0 2em;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+.container-login {
+    display: flex;
+    overflow: none;
+} 
+
+.btnRegisterToExam {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    text-underline-offset: 0.5em;
+    text-align: center;
+    cursor: pointer;
+  }
+
+.illu-login {
+    width: 68%;
+    height: auto;
+    margin: 0 auto 0 auto;
+}
+
+#registration_form_birthday {
+    margin: auto;
+}
+
+.container-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.container-right-login {
+    background-color: #3FB1B5;
+    flex: 1;
+    height: 100vh;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.register-form{
+    background-color: #3FB1B5;
+    flex: 1;
+    height: 100vh;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-form div {
+    margin-top: 1em;
+}
+
+.register-form input{
+    border-radius: 20px;
+    border: none;
+    padding: 0.5em;
+}
+
+.between, .between2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form{
+    padding: 25px;
+    width: 70%;
+}
+
+
+
+.btn-register{
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.container-right-login .lastName_login,.firstName_login {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 0 auto;
+}
+
+#registration_form_firstName {
+    width: 95%;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    /* text-decoration: underline; */
+    text-underline-offset: 0.5em;
+}
+.container-right-login input,.btn-submit {
+    border-radius: 20px;
+    background-color: #fff;
+    margin: 1rem 0 1rem 0;
+    padding: 0.5rem;
+    border: none;
+
+}
+
+label {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.btn-submit {
+    width: 20%;
+    cursor: pointer;
+}
+
+.container-right-login,.container-right-register div, input {
+    width: 100%;
+    margin: 0 auto 0 auto;
+}
+
+/*END LOGIN*/
+
+/* INSCRIPTION*/
+.h1_registration {
+    text-align: center;
+    font-size: 70px;
+    font-weight: 400;
+}
+.container-right-register div {
+display: flex;
+}
+
+.container-row {
+    display: flex!important;
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color:#3FB1B5 ;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+    padding: 30px;
+}
+
+.description{
+    width: 25%;
+}
+
+li{
+    list-style-type: none;
+}
+
+
+.section-1{
+    display: flex;
+    /* background-image: url(../img/illu.svg);
+    background-repeat: no-repeat;
+    background-size: 20rem, contain; */
+    /* background-position: right bottom; */
+    /* background-size: 100% contain; */
+}
+
+/* .illustration{
+    background: url(./illu.svg);
+    width: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+} */
+.confirme{
+    font-size: 75px;
+    width: 70%;
+    padding:20px;
+    font-weight: 400;
+}
+
+.ensavoirplus{
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 0.5px;
+    padding: 20px;
+    
+}
+
+.prochaine{
+    text-align: center;
+    font-size: 40px ;
+}
+
+.design,.dev,.reseau,.devops {
+    border-radius: 20px;
+    width: 17%;
+    padding: 0.7rem;
+}
+
+
+
+.design  {
+    background-color: #3FB1B5;
+}
+.dev{
+    background-color: #FFCF2D;
+
+}
+
+.reseau{
+    background-color: #FE5244;
+}
+
+.devops{
+    background-color: #9A3B82;
+}
+
+.date{
+    display: flex;
+    justify-content: space-between;
+}
+
+.image{
+    text-align: center;
+}
+
+.examens{
+    display: flex;
+    justify-content: space-around;
+    margin: 3em 0 3em 0;
+}
+
+.allExams {
+    display: flex;
+}
+
+.col-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+    margin: 2em 0 2em 0;
+}
+
+.col-12 {
+    flex: 0 0 auto;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.voir{
+    text-align: center;
+    font-size: 20px;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 0.5px;
+    margin: 5rem;
+}
+
+.profile-info{
+    text-align: center;
+}
+
+.infoperso{
+    text-align: left;
+    width: 80%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px;
+}
+
+
+
+.section-2, .section-3{
+    padding: 30px 30px 0 30px;
+}
+
+.name,.email, .lastname, .phone{
+    display: flex;
+    justify-content: space-between;
+}
+
+.signup {
+    text-decoration: underline!important;
+    text-align: center;
+    display: block;
+}
+
+.main-container-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-info,.container-right-profile {
+    flex: 1;
+}
+
+.container-right-profile {
+    background-color: #9A3B82;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-right-profile a {
+    background-color: #FFCF2D;
+    margin-top: 2em;
+    font-weight: 600;
+    padding: 0.5em;
+    border-radius: 20px;
+}
+/* Modal */
+
+.modal, .modal2, .modal3 , .modal4  {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+
+  .modal-content,.modal-content2,.modal-content3,.modal-content4 {
+    margin: 15% auto; 
+    padding: 20px;
+    border-radius: 20px;
+    width: 50%; 
+  }
+  
+
+  .modal-content{
+    background-color: #3FB1B5;
+
+  }
+
+  .modal-content2{
+    background-color: #FFCF2D;
+  }
+  
+  .modal-content3{
+    background-color: #FE5244;
+  }
+
+  .modal-content4{
+    background-color: #9A3B82;
+  }
+
+  .close, .close2, .close3 , .close4  {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover, .close:focus,.close2:hover,.close2:focus{
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .close3:hover,.close3:focus,.close4:hover,.close4:focus{
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+  .btnRegisterToExam {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    text-underline-offset: 0.5em;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .form-registerExam {
+    display: flex;
+    justify-content: space-between;
+  }
+
+.plus{
+    text-decoration: underline;
+    text-decoration-thickness: 0.5px;
+    cursor: pointer;
+    text-align: initial;
+}
+
+  .titre-exam{
+    text-align: center;
+  }
+  /* End modal */
+
+
+  .illu-skill{
+    height: 200px;
+    width: auto;
+  }
+
+  .footer-profile {
+    border-top-right-radius: initial;
+  }
+
+  .section-historique,.section-historique-passexExam{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .section-historique-passexExam {
+    margin-bottom: 2rem;
+  }
+
+  .d-none {
+    display: none;
+  }
+
+  .error {
+    color: #FE5244;
+    border-left: 5px solid #fe5244;
+  }
+
+  .success {
+    color: #3BB54A;
+    border-left: 5px solid #3BB54A;
+  }
+  
+  .error,.success {
+    width: 40%;
+    margin: 0 auto 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+  }
+
+  .error > div,.success > div {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+  }
+
+  .error div:nth-child(2),.success div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+  }
+
+  .error img,.success img{
+    width: 2.5rem;
+    height: auto;
+  }
+
+  .error h3,.success h3 {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+  }
+
+  .passedExam {
+   background: ;
+  }
+
+
+
+
+ 

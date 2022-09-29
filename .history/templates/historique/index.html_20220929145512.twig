@@ -1,0 +1,64 @@
+{% extends 'layout/default.html.twig' %}
+
+{% block body %}
+<h2> Mon historique </h2>
+<h3> Mes examens à venir </h3>
+
+<section class="section-historique">
+{% for exam in exams | sort((a, b) => a.Examens.date <=> b.Examens.date) %}
+{% if exam.Examens.competences.title == "Web Design"%}
+						<div class="design">
+					{% elseif exam.Examens.competences.title =="Développeur Web"%}
+						<div class="dev">
+						{% elseif exam.Examens.competences.title =="Système & Réseaux" %}
+						<div class="reseau">
+						{% elseif exam.Examens.competences.title =="DevOps" %}
+						<div class="devops">
+						{% endif %}
+							<div class="date">
+								<p>{{exam.Examens.city}}</p>
+								<p>{{exam.Examens.date| date('d/m/Y')}}</p>
+							</div>
+							<div class="image">
+								<img src="/assets/img/Group 21.svg" alt="">
+							</div>
+							<hr>
+							<div class="domaine">
+								<p>{{exam.Examens.competences.title}}</p>
+								<p>{{exam.Examens.competences.subtitle}}</p>						
+							</div>
+						</div>
+{% endfor %}
+                        </section>
+<h3> Mes examens passées</h3>
+
+<section class="section-historique">
+{% for passedExam in passedExams | sort((a, b) => a.Examens.date <=> b.Examens.date) %}
+{% if p.Examens.competences.title == "Web Design"%}
+						<div class="design">
+					{% elseif passedExam.Examens.competences.title =="Développeur Web"%}
+						<div class="dev">
+						{% elseif passedExam.Examens.competences.title =="Système & Réseaux" %}
+						<div class="reseau">
+						{% elseif passedExam.Examens.competences.title =="DevOps" %}
+						<div class="devops">
+						{% endif %}
+							<div class="date">
+								<p>{{passedExam.Examens.city}}</p>
+								<p>{{passedExam.Examens.date| date('d/m/Y')}}</p>
+							</div>
+							<div class="image">
+								<img src="/assets/img/Group 21.svg" alt="">
+							</div>
+							<hr>
+							<div class="domaine">
+								<p>{{passedExam.Examens.competences.title}}</p>
+								<p>{{passedExam.Examens.competences.subtitle}}</p>						
+							</div>
+						</div>
+{% endfor %}
+                        </section>
+
+
+
+{% endblock %}

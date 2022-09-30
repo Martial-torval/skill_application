@@ -8,6 +8,7 @@ use App\Repository\CompetencesRepository;
 use App\Repository\ExamensRepository;
 use App\Repository\InscriptionRepository;
 use App\Repository\UserRepository;
+use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\Session;
@@ -66,30 +67,39 @@ class SecurityController extends AbstractController
 
         $examens = $repo->findAll();
         $competences = $repo2->findAll();
-        $user = $this->getUser();
-        $userId = count($user->getIdInscriptions()); // nbr d'inscription | utilisateur
+        // $user = $this->getUser();
+        // $userId = count($user->getIdInscriptions()); // nbr d'inscription | utilisateur
 
 
        
-        return $this->render('session/session.html.twig',['examens'=>$examens,'competences'=>$competences, 'user_id' => $userId]);
+        return $this->render('session/session.html.twig',['examens'=>$examens,'competences'=>$competences]);
     }
 
 
    #[Route('session/{id}', name: 'show', methods:'POST')]
    
 public function show($id, ExamensRepository $repo, InscriptionRepository $repo2) {
+    
     $user = $this->getUser();
-
     // Count nbr registration of current User //
     $userId = count($user->getIdInscriptions());
+
     if($userId < 3) {
+        
+        try{ 
+
         $inscription = new Inscription();
         $examens = $repo->find($id);
         $inscription->setUser($user)
                     ->setExamens($examens);
         $repo2->add($inscription, true);
         $this->addFlash('success', "Vous êtes bien inscrit à cet examen, bonne chance !");
-    }
+
+     } catch(UniqueConstraintViolationException){
+
+            $this->addFlash('erreurRegistered', "Vous êtes dejà inscrit à cet examen ! ");
+        }
+    } 
     else {
         $this->addFlash('error', "Vous pouvez vous inscrire qu'à 3 examens maximum.");
     }

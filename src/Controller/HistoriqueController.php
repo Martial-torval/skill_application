@@ -20,7 +20,6 @@ class HistoriqueController extends AbstractController
         $inscriptions = $user->getIdInscriptions();
 
         $passedExams = $repo->findByDate2();
-        // dd($passedExams);
         
         
         

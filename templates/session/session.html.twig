@@ -35,6 +35,20 @@
 			</div>
 		{% endfor %}
 
+			{% for message in app.flashes('erreurRegistered') %}
+			<div class="error">
+				<div>
+					<img alt="logo flash error" src="/assets/img/flashError.png"/>
+				</div>
+				<div class="messageError">
+					<h3>
+						Erreur
+					</h3>
+					<p>{{message}}</p>
+				</div>
+			</div>
+		{% endfor %}
+
 		<div class="allExams col-12">
 
 			{% for examen in examens | sort((a, b) => a.date > b.date)  %}
@@ -61,7 +75,9 @@
 									<form action="/session/{{examen.id}}" method="post" class="form-registerExam">
 
 										{% if examen.getIdExamens|length < 6 %}
+										 {% if is_granted('ROLE_USER') %}
 											<button class="btnRegisterToExam" name="submit">S'inscrire &rsaquo;</button>
+										{% endif %}
 											<span>{{ examen.getIdExamens|length }}
 												/ 5
 											</span>
